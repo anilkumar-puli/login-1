@@ -1,15 +1,24 @@
-#git clone https://github.com/zelar-soft-todoapp/login.git 
 
+cloning repo
+```
+#git clone https://github.com/zelar-soft-todoapp/login.git 
+```
+```
 install go lang......
 #apt install golang-go
+```
 
+creatinng path
+```
 #mkdir go
 #cd go
 #mkdir src
 #export GOPATH=/go
 #go get
 #go build
-
+```
+writing systemd file
+```
 #vi /etc/systemd/system/login1.service
 
 [Unit]
@@ -23,12 +32,14 @@ Restart=always
 SyslogIdentifier=login1
 [Install]
 WantedBy=multi-user.target
+```
+starting service
 
-
+```
 #sudo systemctl daemon-reload
 #sudo systemctl restart login1
 #sudo systemctl status login1
-
+```
 
 ![image](https://user-images.githubusercontent.com/82602260/116801066-12f2b380-ab24-11eb-9758-411f75e1d181.png)
 
